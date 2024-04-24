@@ -4,11 +4,11 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: '21 3 * * *'
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 env:
-  CUSTOM_IMAGE_NAME: custom
+  CUSTOM_IMAGE_NAME: vfork2
 
 jobs:
   check_update:
