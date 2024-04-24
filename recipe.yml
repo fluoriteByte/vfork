@@ -1,5 +1,5 @@
-name: Custom Vanilla Desktop
-id: vanilla-custom
+name: Vfork custom OCI
+id: vfork
 stages:
 - id: build
   base: ghcr.io/vanilla-os/desktop:main
@@ -20,18 +20,13 @@ stages:
 
   # Put your custom actions behind this comment
 
-  - name: example-packages
+  - name: cloudflare-warp
     type: apt
     source:
       packages:
-      - vim
+      - cloudflare-warp
 
-  - name: example-commands
-    type: shell
-    commands:
-    - echo Example output
-
-  - name: example-modules
+  - name: Deb installer
     type: includes
     includes:
       - modules/50-install-debs.yml
